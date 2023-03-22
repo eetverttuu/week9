@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewUserActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Anna käyttäjän yhteystiedot"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtUserFirstName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923" />
+
+    <EditText
+        android:id="@+id/txtUserFirstName"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Etunimi"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtUserLastName"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Sukunimi"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserFirstName" />
+
+    <EditText
+        android:id="@+id/txtUserEmail"
+        android:layout_width="225dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Sähköpostiosoite"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserLastName" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valitse opiskeltava ala"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rgDegreeType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.339"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserEmail"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <RadioGroup
+        android:id="@+id/rgDegreeType"
+        android:layout_width="225dp"
+        android:layout_height="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserEmail"
+        app:layout_constraintVertical_bias="0.11">
+
+        <RadioButton
+            android:id="@+id/rdTite"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Tietotekniikka" />
+
+        <RadioButton
+            android:id="@+id/rdTuta"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Tuotantotalous" />
+
+        <RadioButton
+            android:id="@+id/rdLate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Laskennallinen tekniikka" />
+
+        <RadioButton
+            android:id="@+id/rdEnte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Energiatekniika" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAddUser"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="addUser"
+        android:text="Lisää käyttäjä"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valitse sopiva profiilikuva"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgDegreeType"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <RadioGroup
+        android:id="@+id/rgImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbSpongebob"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="1." />
+
+        <RadioButton
+            android:id="@+id/rbMM"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2." />
+
+        <RadioButton
+            android:id="@+id/rbBatman"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="3." />
+
+        <RadioButton
+            android:id="@+id/rbBaby"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4." />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageBaby"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/rgImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageBatman"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.738"
+        app:srcCompat="@drawable/baby" />
+
+    <ImageView
+        android:id="@+id/imageMM"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/rgImage"
+        app:layout_constraintStart_toEndOf="@+id/imageSpongebob"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.738"
+        app:srcCompat="@drawable/mm" />
+
+    <ImageView
+        android:id="@+id/imageSpongebob"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/rgImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.738"
+        app:srcCompat="@drawable/spongebob" />
+
+    <ImageView
+        android:id="@+id/imageBatman"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/rgImage"
+        app:layout_constraintStart_toEndOf="@+id/imageMM"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.738"
+        app:srcCompat="@drawable/batman" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
